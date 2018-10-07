@@ -12,10 +12,6 @@ $ go get github.com/tzmfreedom/go-salesforce-formula-parser
 package main
 
 import (
-	"github.com/tzmfreedom/go-salesforce-formula-parser"
-)
-
-import (
 	"encoding/json"
 	"fmt"
 
