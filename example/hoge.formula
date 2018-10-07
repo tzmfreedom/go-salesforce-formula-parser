@@ -1,0 +1,1 @@
+IF(TRUE,"hoge","fuga") + "foo" - (123 * 23.5)
