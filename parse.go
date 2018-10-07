@@ -4,9 +4,12 @@ import (
 	"github.com/antlr/antlr4/runtime/Go/antlr"
 )
 
-func ParseFile(f string) interface{} {
-	input, _ := antlr.NewFileStream(f)
-	return parse(input)
+func ParseFile(f string) (interface{}, error) {
+	input, err := antlr.NewFileStream(f)
+	if err != nil {
+		return nil, err
+	}
+	return parse(input), nil
 }
 
 func ParseString(data string) interface{} {
