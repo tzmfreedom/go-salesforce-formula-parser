@@ -24,5 +24,5 @@ func parse(input antlr.CharStream) interface{} {
 	p.AddErrorListener(antlr.NewDiagnosticErrorListener(true))
 	p.BuildParseTrees = true
 	tree := p.CompilationUnit()
-	return tree.Accept(&BaseformulaVisitor{})
+	return tree.Accept(&FormulaBuilder{})
 }
